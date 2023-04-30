@@ -62,7 +62,7 @@ def send_logs_to_aws_cw(client, container, group_name, stream_name):
             logs = container.logs()
             if logs:
                 log_events = [{'timestamp': int(time.time() * 1000),
-                               'message': log.decode('utf-8')} for log in logs.splitlines()]
+                               'message': log.decode('utf-8')} for log in logs.splitlines() if log]
                 try:
                     res = client.put_log_events(logGroupName=group_name, logStreamName=stream_name,
                                                 logEvents=log_events)
