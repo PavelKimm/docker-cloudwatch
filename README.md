@@ -32,4 +32,5 @@ python docker_script.py
  --aws-cloudwatch-stream my_stream
  --aws-access-key-id access_key
  --aws-secret-access-key secret_key
- --aws-region eu-north-1```
+ --aws-region eu-north-1
+ ```
