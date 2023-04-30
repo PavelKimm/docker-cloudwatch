@@ -1,0 +1,8 @@
+.idea
+.vscode
+.project
+.pydevproject
+*.pyc
+*.mo
+.DS_Store
+venv/
